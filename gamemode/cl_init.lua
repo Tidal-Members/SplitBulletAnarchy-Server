@@ -10,6 +10,7 @@
 	SOFTWARE.
 */
 
+include("cl_deathnotice.lua")
 include( "shared.lua" )
 
 local oldorigin

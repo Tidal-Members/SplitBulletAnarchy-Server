@@ -23,6 +23,9 @@ function ENT:Initialize()
     if self.Range == nil then
 		self.Range = 150
 	end
+	if self.BurrowRange == nil then
+		self.BurrowRange = 50
+	end
 	if self.StartBurrowed == nil then
     	self.StartBurrowed = false
 	end
@@ -34,6 +37,8 @@ end
 function ENT:KeyValue(key, value)
 	if key == "range" then
 		self.Range = value
+	elseif key == "burrowrange" then
+		self.BurrowRange = value
 	elseif key == "burrowed" then
 		if value > 0 then
 			self.StartBurrowed = true
@@ -155,15 +160,16 @@ function ENT:Burrow()
     self:StopSound("ambient/levels/canals/generator_ambience_loop1.wav")
     local vec = self:GetPos()
     local ang = self:GetAngles()
-	if ang.y  < 0 then
+	-- TODO: Fix snapping to angles.
+	--[[if ang.y < 0 then
 		ang.y = 0
 	else
 		ang.y = 180
-	end
+	end]]--
     local physobj = self:GetPhysicsObject()
     local diff = vec.z
     local goal = diff-20
-	while playersinrange(vec, 150) and !self.Dead do
+	while playersinrange(vec, self.BurrowRange) and !self.Dead do
         if diff >= goal then
             diff = diff - 5
         end

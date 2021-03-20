@@ -10,6 +10,7 @@
 	SOFTWARE.
 */
 
+AddCSLuaFile( "cl_deathnotice.lua" )
 AddCSLuaFile( "cl_init.lua" )
 AddCSLuaFile( "shared.lua" )
 
@@ -18,6 +19,8 @@ AddCSLuaFile( "player_class/player_uno.lua" )
 AddCSLuaFile( "player_class/player_dos.lua" )
 
 include( "shared.lua" )
+include( "npc.lua" )
+include( "player.lua" )
 
 --resource.AddFile( "materials/splitbullet/weapons/bucketicons/glock.vmt" ) -- bucket icon for pistol
 

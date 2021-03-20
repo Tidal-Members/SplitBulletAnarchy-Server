@@ -14,7 +14,23 @@ include( "shared.lua" )
 
 ENT.AutomaticFrameAdvance = true -- Must be set on client
 
+killicon.Add("npc_bolter", "HUD/killicons/splitbullet_bolter", Color( 255, 80, 0, 255 ) )
+
 function ENT:Think()
+	local dlight = DynamicLight( self:EntIndex() )
+	if ( dlight ) then
+		local pos = self:GetPos()
+		pos.y = pos.y + -5
+		pos.z = pos.z + 5
+		dlight.pos = pos
+		dlight.r = 255
+		dlight.g = 255
+		dlight.b = 255
+		dlight.brightness = 2
+		dlight.Decay = 1000
+		dlight.Size = 128
+		dlight.DieTime = CurTime() + 1
+	end
 	self:NextThink( CurTime() ) -- Set the next think to run as soon as possible, i.e. the next frame.
 	return true -- Apply NextThink call
 end
