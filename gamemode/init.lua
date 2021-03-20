@@ -22,6 +22,7 @@ include( "shared.lua" )
 include( "npc.lua" )
 include( "player.lua" )
 
+resource.AddWorkshop("2387941394")
 --resource.AddFile( "materials/splitbullet/weapons/bucketicons/glock.vmt" ) -- bucket icon for pistol
 
 hook.Add("PlayerSpawn", "SplitBullet.Server.PlayerSpawn", function(player, transition)
