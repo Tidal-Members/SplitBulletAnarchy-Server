@@ -10,6 +10,7 @@
 	SOFTWARE.
 */
 
+AddCSLuaFile("shared.lua")
 include( "shared.lua" )
 
 local personalities = {

@@ -147,7 +147,7 @@ hook.Add("CalcView", "SplitBullet.Client.CalcView", function(player, origin, ang
         oldorigin = neworigin
     end
 
-    oldorigin = LerpVector(FrameTime() * 5, oldorigin, neworigin)
+    oldorigin = LerpVector(FrameTime() * 7.5, oldorigin, neworigin)
 
     plyview.origin = oldorigin
     plyview.fov = 75

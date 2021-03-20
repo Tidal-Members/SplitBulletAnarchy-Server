@@ -16,8 +16,8 @@ local PLAYER = {}
 
 PLAYER.DisplayName			= "Dos"
 
-PLAYER.WalkSpeed			= 450		-- How fast to move when not running
-PLAYER.RunSpeed				= 450		-- How fast to move when running
+PLAYER.WalkSpeed			= 100		-- How fast to move when not running
+PLAYER.RunSpeed				= 100		-- How fast to move when running
 PLAYER.CrouchedWalkSpeed	= 0.3		-- Multiply move speed by this when crouching
 PLAYER.DuckSpeed			= 0.3		-- How fast to go from not ducking, to ducking
 PLAYER.UnDuckSpeed			= 0.3		-- How fast to go from ducking, to not ducking

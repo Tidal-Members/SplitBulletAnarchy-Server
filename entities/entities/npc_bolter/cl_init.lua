@@ -13,20 +13,8 @@
 include( "shared.lua" )
 
 ENT.AutomaticFrameAdvance = true -- Must be set on client
-print("hi")
-function ENT:Think()
-	local dlight = DynamicLight( self:EntIndex() )
-	if ( dlight ) then
-		dlight.pos = self:GetPos()
-		dlight.r = 255
-		dlight.g = 0
-		dlight.b = 0
-		dlight.brightness = 2
-		dlight.Decay = 1000
-		dlight.Size = 256
-		dlight.DieTime = CurTime() + 1
-	end
 
+function ENT:Think()
 	self:NextThink( CurTime() ) -- Set the next think to run as soon as possible, i.e. the next frame.
 	return true -- Apply NextThink call
 end

@@ -10,7 +10,6 @@
 	SOFTWARE.
 */
 
-AddCSLuaFile()
 SWEP.Base = "weapon_splitbulletbase"
 SWEP.PrintName = "Pistol"
 SWEP.Instructions = "MOUSE1 to shoot."
