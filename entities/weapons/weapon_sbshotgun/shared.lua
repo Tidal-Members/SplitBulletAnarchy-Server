@@ -21,7 +21,7 @@ SWEP.Primary.Ammo = "pistol"
 SWEP.Primary.ClipSize = 6
 SWEP.Primary.DefaultClip = 1
 SWEP.Primary.Automatic = false
-SWEP.Primary.Cone = 1
+SWEP.Primary.Cone = 0.3
 SWEP.Primary.Delay = 0.065
 SWEP.Primary.Burst = 4
 
@@ -42,7 +42,7 @@ function SWEP:PrimaryAttack()
     self:SendWeaponAnim(ACT_VM_PRIMARYATTACK)
 	self:GetOwner():MuzzleFlash()
 	-- Shoot 5 bullets, 1 aimcone
-	self:ShootBullet( 5, 15, 1 )
+	self:ShootBullet( 5, 15, 0.3 )
 
 end
 
