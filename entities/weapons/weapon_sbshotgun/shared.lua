@@ -31,7 +31,7 @@ SWEP.Secondary.Automatic	= false
 SWEP.Secondary.Ammo			= "none"
 
 SWEP.Slot = 0
-SWEP.SlotPos = 0
+SWEP.SlotPos = 1
 
 function SWEP:PrimaryAttack()
 	-- Make sure we can shoot first
@@ -41,8 +41,8 @@ function SWEP:PrimaryAttack()
 	self:EmitSound("Weapon_Pistol.Single")
     self:SendWeaponAnim(ACT_VM_PRIMARYATTACK)
 	self:GetOwner():MuzzleFlash()
-	-- Shoot 5 bullets, 0.01 aimcone
-	self:ShootBullet( 5, 15, 0 )
+	-- Shoot 5 bullets, 1 aimcone
+	self:ShootBullet( 5, 15, 1 )
 
 end
 
