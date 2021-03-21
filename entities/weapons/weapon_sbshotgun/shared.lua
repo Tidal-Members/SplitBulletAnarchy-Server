@@ -30,7 +30,7 @@ SWEP.Secondary.DefaultClip	= -1
 SWEP.Secondary.Automatic	= false
 SWEP.Secondary.Ammo			= "none"
 
-SWEP.Slot = 0
+SWEP.Slot = 1
 SWEP.SlotPos = 1
 
 function SWEP:PrimaryAttack()
