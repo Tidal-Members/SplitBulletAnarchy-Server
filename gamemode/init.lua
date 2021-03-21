@@ -138,11 +138,11 @@ net.Receive("SplitBullet.Network.Spawn", function( len, ply )
 end)
 
 hook.Add( "Move", "SplitBullet.Server.Move", function( ply, mv )
-    --if !ply:GetNWBool("Freed",false) then
-        --local pos = mv:GetOrigin()
-        --local axis = ply:GetNWString("PlayerAxis", 0)
-        --mv:SetOrigin( Vector(pos.x, axis, pos.z) ) --we don't want the player to move out of bounds
-    --end
+    if !ply:GetNWBool("Freed",false) then
+        local pos = mv:GetOrigin()
+        local axis = ply:GetNWString("PlayerAxis", 0)
+        mv:SetOrigin( Vector(pos.x, axis, pos.z) ) --we don't want the player to move out of bounds
+    end
     return false
 end)
 
