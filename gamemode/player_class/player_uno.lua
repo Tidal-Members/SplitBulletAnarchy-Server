@@ -38,6 +38,7 @@ function PLAYER:Loadout()
     self.Player:RemoveAllAmmo()
     self.Player:GiveAmmo( 256,	"Pistol", 		true )
     self.Player:Give( "weapon_glock" )
+	self.Player:Give( "weapon_sbshotgun" 
     --[[self.Player:RemoveAllAmmo()
     self.Player:GiveAmmo( 256,	"Pistol", 		true )
     self.Player:Give( "weapon_pistol" )
