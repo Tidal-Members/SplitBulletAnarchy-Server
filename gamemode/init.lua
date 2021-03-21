@@ -10,6 +10,8 @@
 	SOFTWARE.
 */
 
+--hello from kiwi-pc
+
 AddCSLuaFile( "cl_deathnotice.lua" )
 AddCSLuaFile( "cl_init.lua" )
 AddCSLuaFile( "shared.lua" )
