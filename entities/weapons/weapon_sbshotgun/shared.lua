@@ -13,7 +13,7 @@
 SWEP.Base = "weapon_splitbulletbase"
 SWEP.PrintName = "Shotgun"
 SWEP.Instructions = "MOUSE1 to shoot."
-SWEP.ViewModel = "models/weapons/v_shotgun.mdl" --default hl2 pistol
+SWEP.ViewModel = "models/weapons/v_shotgun.mdl" --default hl2 shotgun
 SWEP.WorldModel = "models/splitbullet/weapons/w_sbshotgun.mdl"
 
 SWEP.CSMuzzleFlashes = false
