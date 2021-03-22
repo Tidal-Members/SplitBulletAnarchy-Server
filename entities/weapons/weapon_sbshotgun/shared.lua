@@ -21,7 +21,7 @@ SWEP.Primary.Ammo = "pistol"
 SWEP.Primary.ClipSize = 6
 SWEP.Primary.DefaultClip = 1
 SWEP.Primary.Automatic = false
-SWEP.Primary.Cone = 0.3
+SWEP.Primary.Cone = 1
 SWEP.Primary.Delay = 0.065
 SWEP.Primary.Burst = 4
 
@@ -43,10 +43,14 @@ function SWEP:PrimaryAttack()
 	self:GetOwner():MuzzleFlash()
 	-- Shoot 5 bullets, 1 aimcone
 <<<<<<< HEAD
+<<<<<<< HEAD
 	self:ShootBullet( 5, 15, 0 )
 =======
 	self:ShootBullet( 5, 15, 0.3 )
 >>>>>>> 4fd8ea7c08a69a0d4f1e3781b229c9da8f665ba0
+=======
+	self:ShootBullet( 5, 15, 1 )
+>>>>>>> parent of 71c011b (ok shotgun fix)
 
 end
 
