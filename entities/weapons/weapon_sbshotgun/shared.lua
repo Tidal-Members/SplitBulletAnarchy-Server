@@ -42,7 +42,11 @@ function SWEP:PrimaryAttack()
     self:SendWeaponAnim(ACT_VM_PRIMARYATTACK)
 	self:GetOwner():MuzzleFlash()
 	-- Shoot 5 bullets, 1 aimcone
+<<<<<<< HEAD
 	self:ShootBullet( 5, 15, 0 )
+=======
+	self:ShootBullet( 5, 15, 0.3 )
+>>>>>>> 4fd8ea7c08a69a0d4f1e3781b229c9da8f665ba0
 
 end
 
