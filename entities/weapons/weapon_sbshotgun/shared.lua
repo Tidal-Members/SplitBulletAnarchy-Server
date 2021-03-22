@@ -25,10 +25,13 @@ SWEP.Primary.Cone = 0.3
 SWEP.Primary.Delay = 0.065
 SWEP.Primary.Burst = 4
 
-SWEP.Secondary.ClipSize		= -1
-SWEP.Secondary.DefaultClip	= -1
+SWEP.Secondary.ClipSize		= 3
+SWEP.Secondary.DefaultClip	= 1
 SWEP.Secondary.Automatic	= false
-SWEP.Secondary.Ammo			= "none"
+SWEP.Secondary.Ammo			= "pistol"
+SWEP.Primary.Cone = 0.3
+SWEP.Primary.Delay = 0.065
+SWEP.Primary.Burst = 4
 
 SWEP.Slot = 1
 SWEP.SlotPos = 1
@@ -50,11 +53,10 @@ function SWEP:SecondaryAttack()
 	returnif ( !self:CanSecondaryAttack() ) then return end
 
 	-- Play shoot sound
-	self:EmitSound("Weapon_Pistol.Single")
-    self:SendWeaponAnim(ACT_VM_PRIMARYATTACK)
+	self:EmitSound("Weapon_Shotgun.Single")
+    self:SendWeaponAnim(ACT_VM_SECONDARYATTACK)
 	self:GetOwner():MuzzleFlash()
 	-- Shoot 5 bullets, 1 aimcone
 
-	self:ShootBullet( 5, 30, 0.2 )
-	self:ShootBullet( 5, 30, 0.2 )
+	self:ShootBullet( 10, 30, 0.2 )
 end
