@@ -50,7 +50,6 @@ function SWEP:PrimaryAttack()
 end
 
 function SWEP:SecondaryAttack()
-	returnif ( !self:CanSecondaryAttack() ) then return end
 
 	-- Play shoot sound
 	self:EmitSound("Weapon_Shotgun.Single")
