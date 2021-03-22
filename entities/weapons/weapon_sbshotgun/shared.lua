@@ -47,5 +47,14 @@ function SWEP:PrimaryAttack()
 end
 
 function SWEP:SecondaryAttack()
-	return
+	returnif ( !self:CanSecondaryAttack() ) then return end
+
+	-- Play shoot sound
+	self:EmitSound("Weapon_Pistol.Single")
+    self:SendWeaponAnim(ACT_VM_PRIMARYATTACK)
+	self:GetOwner():MuzzleFlash()
+	-- Shoot 5 bullets, 1 aimcone
+
+	self:ShootBullet( 5, 30, 0.2 )
+	self:ShootBullet( 5, 30, 0.2 )
 end
