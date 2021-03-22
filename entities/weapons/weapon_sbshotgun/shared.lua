@@ -43,7 +43,7 @@ function SWEP:PrimaryAttack()
 	self:GetOwner():MuzzleFlash()
 	-- Shoot 5 bullets, 1 aimcone
 
-	self:ShootBullet( 5, 15, 0 )
+	self:ShootBullet( 5, 15, 0.2 )
 end
 
 function SWEP:SecondaryAttack()
