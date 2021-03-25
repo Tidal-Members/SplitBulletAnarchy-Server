@@ -17,7 +17,7 @@ SWEP.ViewModel = "models/weapons/v_shotgun.mdl" --default hl2 shotgun
 SWEP.WorldModel = "models/splitbullet/weapons/w_sbshotgun.mdl"
 
 SWEP.CSMuzzleFlashes = false
-SWEP.Primary.Ammo = "pistol"
+SWEP.Primary.Ammo = "Buckshot"
 SWEP.Primary.ClipSize = 6
 SWEP.Primary.DefaultClip = 1
 SWEP.Primary.Automatic = false
@@ -28,10 +28,7 @@ SWEP.Primary.Burst = 4
 SWEP.Secondary.ClipSize		= 3
 SWEP.Secondary.DefaultClip	= 1
 SWEP.Secondary.Automatic	= false
-SWEP.Secondary.Ammo			= "pistol"
-SWEP.Primary.Cone = 0.3
-SWEP.Primary.Delay = 0.065
-SWEP.Primary.Burst = 4
+SWEP.Secondary.Ammo			= "Buckshot"
 
 SWEP.Slot = 1
 SWEP.SlotPos = 1
@@ -46,7 +43,7 @@ function SWEP:PrimaryAttack()
 	self:GetOwner():MuzzleFlash()
 	-- Shoot 5 bullets, 1 aimcone
 
-	self:ShootBullet( 5, 30, 0.2 )
+	self:ShootBullet( 5, 30, 0.15 )
 end
 
 function SWEP:SecondaryAttack()
@@ -57,5 +54,5 @@ function SWEP:SecondaryAttack()
 	self:GetOwner():MuzzleFlash()
 	-- Shoot 5 bullets, 1 aimcone
 
-	self:ShootBullet( 10, 30, 0.2 )
+	self:ShootBullet( 10, 30, 0.3 )
 end
